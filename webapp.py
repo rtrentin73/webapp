@@ -1,9 +1,6 @@
-'''
+from flask import Flask
+app = Flask(__name__)
 
-  webapp.py: print "hello world!"
-
-'''
-from pprint import pp
-
-if __name__ == '__main__':
-  pp("hello world!")
+@app.route("/")
+def hello():
+    return "Hello, World!"
